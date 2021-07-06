@@ -1,6 +1,8 @@
 # textdump
 
-Module and scripts to dump codepoints of the given unicode text
+**♥ Unicode**
+
+Module and scripts to dump codepoints of the given text
 
 ## textdump.py
 
