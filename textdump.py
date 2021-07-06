@@ -16,10 +16,6 @@ import unicodedata
 #
 
 
-CARRIAGE_RETURN = '\r'
-HORIZONTAL_TAB = '\t'
-LINE_FEED = '\n'
-
 CONTROLS_NAMES = {
     '\u0000': 'NULL',
     '\u0001': 'START OF HEADING',
@@ -30,9 +26,9 @@ CONTROLS_NAMES = {
     '\u0006': 'ACKNOWLEDGE',
     '\u0007': 'BELL',
     '\u0008': 'BACKSPACE',
-    '\u0009': 'CHARACTER TABULATION',
+    '\u0009': 'CHARACTER TABULATION (HT)',
     '\u000A': 'LINE FEED (LF)',
-    '\u000B': 'LINE TABULATION= vertical tabulation (VT)',
+    '\u000B': 'LINE TABULATION (VT)',
     '\u000C': 'FORM FEED (FF)',
     '\u000D': 'CARRIAGE RETURN (CR)',
     '\u000E': 'SHIFT OUT',
@@ -61,7 +57,7 @@ CONTROLS_NAMES = {
     '\u0086': 'START OF SELECTED AREA',
     '\u0087': 'END OF SELECTED AREA',
     '\u0088': 'CHARACTER TABULATION SET',
-    '\u0089': 'CHARACTER TABULATION WITHJUSTIFICATION',
+    '\u0089': 'CHARACTER TABULATION WITH JUSTIFICATION',
     '\u008A': 'LINE TABULATION SET',
     '\u008B': 'PARTIAL LINE FORWARD',
     '\u008C': 'PARTIAL LINE BACKWARD',
@@ -86,9 +82,9 @@ CONTROLS_NAMES = {
 }
 
 ESCAPES = {
-    CARRIAGE_RETURN: r'\r',
-    HORIZONTAL_TAB: r'\t',
-    LINE_FEED: r'\n',
+    '\u0009': r'\t',
+    '\u000A': r'\n',
+    '\u000D': r'\r',
 }
 
 MARKS = 'M'
